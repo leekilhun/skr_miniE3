@@ -25,12 +25,19 @@ bool hwInit(void)
 
   ret &= uartInit();
 
-  ret &= ledInit();
-  //ret &= rtcInit();
-  //ret &= resetInit();
   ret &= flashInit();
 
+  ret &= ledInit();
 
+  ret &= gpioInit();
+
+  //ret &= rtcInit();
+  //ret &= resetInit();
+
+
+#ifdef _USE_HW_TIM
+  ret &= timInit();
+#endif
 
 
   //ret &= buttonInit();

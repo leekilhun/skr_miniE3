@@ -9,6 +9,10 @@
 #define SRC_COMMON_HW_INC_LCD_H_
 
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "exhw_def.h"
 
 
@@ -69,11 +73,9 @@ typedef struct lcd_driver_t_
 
 
 
-#ifdef _USE_MODULE_LCD
+#ifdef _USE_EXHW_LCD
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+
 
 bool lcdInit(void);
 bool lcdIsInit(void);
@@ -123,10 +125,11 @@ void lcdPrintf(int x, int y, uint16_t color,  const char *fmt, ...);
 void lcdSetFont(LcdFont font);
 LcdFont lcdGetFont(void);
 
+
+#endif /* _USE_HW_LCD */
+
 #ifdef __cplusplus
 }
 #endif
-
-#endif /* _USE_HW_LCD */
 
 #endif /* SRC_COMMON_HW_INC_LCD_H_ */

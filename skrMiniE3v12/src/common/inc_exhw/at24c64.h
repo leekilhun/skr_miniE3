@@ -8,18 +8,14 @@
 #ifndef SRC_COMMON_INC_MODULE_AT24C64_H_
 #define SRC_COMMON_INC_MODULE_AT24C64_H_
 
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include "exhw_def.h"
 
 
-#ifdef _USE_MODULE_AT24C64
-
-
-
-#ifdef __cplusplus
-extern "C" {
-#endif
+#ifdef _USE_EXHW_AT24C64
 
   bool at24c64Init(void);
   bool at24c64IsInit(void);
@@ -38,12 +34,10 @@ extern "C" {
   bool at24c64pageRead(uint8_t page, uint8_t* p_data);
 
 
+#endif
+
 #ifdef __cplusplus
 }
 #endif
-
-
-#endif
-
 
 #endif /* SRC_COMMON_INC_MODULE_AT24C64_H_ */

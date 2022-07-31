@@ -8,6 +8,9 @@
 #ifndef SRC_COMMON_INC_HW_I2C_H_
 #define SRC_COMMON_INC_HW_I2C_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include "hw_def.h"
 
@@ -51,6 +54,10 @@ void     i2cClearErrCount(uint8_t ch);
 uint32_t i2cGetErrCount(uint8_t ch);
 
 
+#endif
+
+#ifdef __cplusplus
+}
 #endif
 
 

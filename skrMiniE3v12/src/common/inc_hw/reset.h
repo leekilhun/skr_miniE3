@@ -8,6 +8,9 @@
 #ifndef SRC_COMMON_INC_HW_RESET_H_
 #define SRC_COMMON_INC_HW_RESET_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include "hw_def.h"
 
@@ -25,5 +28,8 @@ void resetToSysBoot(void);
 
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* SRC_COMMON_INC_HW_RESET_H_ */

@@ -8,6 +8,10 @@
 #ifndef SRC_COMMON_INC_HW_GPIO_H_
 #define SRC_COMMON_INC_HW_GPIO_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #include "hw_def.h"
 
 
@@ -15,10 +19,6 @@
 
 
 #define GPIO_MAX_CH     HW_GPIO_MAX_CH
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 bool gpioInit(void);
 bool gpioPinMode(uint8_t ch, uint8_t mode);
@@ -28,10 +28,10 @@ void gpioPinToggle(uint8_t ch);
 bool gpioIsOn(uint8_t ch);
 
 
-#ifdef __cplusplus
-}
 #endif
 
+#ifdef __cplusplus
+}
 #endif
 
 #endif /* SRC_COMMON_INC_HW_GPIO_H_ */

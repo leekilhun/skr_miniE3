@@ -14,6 +14,9 @@ extern "C" {
 
 #include "exhw_def.h"
 
+#include "motors.h"
+#include "stepper.h"
+
 bool exhwInit(void);
 
 

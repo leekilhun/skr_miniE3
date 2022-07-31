@@ -30,9 +30,34 @@ void apInit(void)
 
 void apMain(void)
 {
+
+	//motorEnable(AXIS_MAX);
+
+	stepperEnable(AXIS_1);
+	stepperEnable(AXIS_2);
+
+
+  stepperStart(AXIS_1);
+  stepperStart(AXIS_2);
+  stepperPrepareMove(AXIS_1,   16000);
+  stepperPrepareMove(AXIS_2,  -32000);
+  stepperRunAndWait();
+
+
+  stepperPrepareMove(AXIS_1,  0);
+  stepperPrepareMove(AXIS_2,  0);
+  stepperRunAndWait();
+
+  stepperDisable(AXIS_1);
+  stepperDisable(AXIS_2);
+
+
+
   while(1)
   {
     cliMain();
+
+    delay(2);
   }
 
 }
@@ -55,6 +80,7 @@ void threadLed(void const *argument)
       ledToggle(_DEF_LED1);
     }
 
+    delay(2);
   }
 }
 

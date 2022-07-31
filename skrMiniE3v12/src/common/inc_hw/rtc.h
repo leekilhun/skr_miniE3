@@ -8,6 +8,9 @@
 #ifndef SRC_COMMON_INC_HW_RTC_H_
 #define SRC_COMMON_INC_HW_RTC_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include "hw_def.h"
 
@@ -23,6 +26,8 @@ void     rtcBackupRegWrite(uint32_t index, uint32_t data);
 
 #endif
 
-
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* SRC_COMMON_INC_HW_RTC_H_ */

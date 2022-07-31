@@ -14,7 +14,7 @@ bool exhwInit(void)
 {
   bool ret = true;
 
-  //ret &=  at24c64Init();
+  ret &=  stepperInit();
 
   return ret;
 }

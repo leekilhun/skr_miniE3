@@ -16,7 +16,7 @@ extern "C" {
 #include "exhw_def.h"
 
 
-#ifdef _USE_MODULE_MCP2515
+#ifdef _USE_EXHW_MCP2515
 
 
 #define MCP2515_MAX_CH              _MODULE_MCP2515_MAX_CH

@@ -8,6 +8,9 @@
 #ifndef SRC_COMMON_INC_HW_SPI_H_
 #define SRC_COMMON_INC_HW_SPI_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include "hw_def.h"
 
@@ -32,9 +35,7 @@
 #define SPI_MODE2           2
 #define SPI_MODE3           3
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+
 
 
 bool spiInit(void);
@@ -55,10 +56,11 @@ bool spiDmaTxIsDone(uint8_t ch);
 void spiAttachTxInterrupt(uint8_t ch, void (*func)());
 
 
-#ifdef __cplusplus
-}
+
 #endif
 
+#ifdef __cplusplus
+}
 #endif
 
 #endif /* SRC_COMMON_INC_HW_SPI_H_ */

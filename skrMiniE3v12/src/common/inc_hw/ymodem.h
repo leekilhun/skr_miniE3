@@ -8,7 +8,9 @@
 #ifndef SRC_COMMON_INC_HW_YMODEM_H_
 #define SRC_COMMON_INC_HW_YMODEM_H_
 
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include "hw_def.h"
 
@@ -81,5 +83,8 @@ bool ymodemAck(ymodem_t *p_modem);
 
 #endif
 
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* SRC_COMMON_INC_HW_YMODEM_H_ */

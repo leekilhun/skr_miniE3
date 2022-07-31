@@ -11,7 +11,9 @@
 
 #include "hw.h"
 
-//#define     _USE_MODULE_AT24C64
+//#define     _USE_EXHW_AT24C64
 
+//#define _USE_EXHW_MOTORS
+#define _USE_EXHW_STEPPER
 
 #endif /* SRC_EXHW_EXHW_DEF_H_ */

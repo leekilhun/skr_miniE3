@@ -8,6 +8,9 @@
 #ifndef SRC_HW_HW_H_
 #define SRC_HW_HW_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 
 #include "hw_def.h"
@@ -26,10 +29,8 @@
 #include "log.h"
 #include "flash.h"
 #include "gpio.h"
+#include "tim.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 bool hwInit(void);
 

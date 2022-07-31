@@ -16,6 +16,8 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include <math.h>
+
 #include "err_code.h"
 #include "util.h"
 #include "binary.h"
@@ -31,6 +33,21 @@ typedef enum
 {	_DISABLE,
 	_ENABLE
 }func_state;
+
+
+typedef enum
+{
+  AXIS_1,
+  AXIS_2,
+  AXIS_3,
+  AXIS_4,
+
+  AXIS_MAX
+} axis_dir;
+
+
+#define CW                    0
+#define CCW                   1
 
 
 #define BYTE				  uint8_t
@@ -56,6 +73,17 @@ typedef enum
 #define _DEF_BUTTON3          2
 #define _DEF_BUTTON4          3
 
+#define _DEF_GPIO1						0
+#define _DEF_GPIO2						1
+#define _DEF_GPIO3						2
+#define _DEF_GPIO4						3
+#define _DEF_GPIO5						4
+#define _DEF_GPIO6						5
+#define _DEF_GPIO7						6
+#define _DEF_GPIO8						7
+#define _DEF_GPIO9						8
+#define _DEF_GPIO10						9
+
 #define _DEF_SPI1             0
 #define _DEF_SPI2             1
 #define _DEF_SPI3             2
@@ -70,6 +98,11 @@ typedef enum
 #define _DEF_I2S2             1
 #define _DEF_I2S3             2
 #define _DEF_I2S4             3
+
+#define _DEF_TIM1             0
+#define _DEF_TIM2             1
+#define _DEF_TIM3             2
+#define _DEF_TIM4             3
 
 #define _DEF_PWM1             0
 #define _DEF_PWM2             1

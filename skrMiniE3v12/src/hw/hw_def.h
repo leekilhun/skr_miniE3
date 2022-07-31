@@ -45,10 +45,18 @@
 //#define _USE_HW_BUTTON
 #define      HW_BUTTON_MAX_CH       1
 
-//#define _USE_HW_GPIO
-#define      HW_GPIO_MAX_CH         1
-#define        _GPIO_W25Q16_NCS     0
+#define _USE_HW_GPIO
+#ifdef	_USE_HW_GPIO
+#define      HW_GPIO_MAX_CH         7
 
+#define				 _PIN_XMOTOR_EN				_DEF_GPIO1
+#define				 _PIN_XMOTOR_DIR			_DEF_GPIO2
+#define				 _PIN_XMOTOR_STP			_DEF_GPIO3
+
+#define        _PIN_YMOTOR_EN       _DEF_GPIO5
+#define        _PIN_YMOTOR_DIR      _DEF_GPIO6
+#define        _PIN_YMOTOR_STP      _DEF_GPIO7
+#endif
 
 #define _USE_HW_CDC
 #define _USE_HW_USB
@@ -70,9 +78,11 @@
 #define      HW_CLI_LINE_HIS_MAX    4
 #define      HW_CLI_LINE_BUF_MAX    64
 
+
 //#define _USE_HW_CAN
 #define      HW_CAN_MAX_CH          1
 #define      HW_CAN_MSG_RX_BUF_MAX  16
+
 
 //#define _USE_HW_SPI
 #define      HW_SPI_MAX_CH          2
@@ -83,6 +93,15 @@
 //#define _USE_HW_I2C
 #define      HW_I2C_MAX_CH          2
 
+
+#define _USE_HW_TIM
+#ifdef  _USE_HW_TIM
+#define      HW_TIM_MAX_CH          4
+#define        _TIM_2               0
+#define        _TIM_3               1
+#define        _TIM_4               2
+#define        _TIM_5               3
+#endif
 
 
 #endif /* SRC_HW_HW_DEF_H_ */

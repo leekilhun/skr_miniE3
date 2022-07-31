@@ -8,16 +8,16 @@
 #ifndef SRC_COMMON_INC_MODULE_W25QXX_H_
 #define SRC_COMMON_INC_MODULE_W25QXX_H_
 
-
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #include "exhw_def.h"
 
 
-#ifdef _USE_MODULE_W25QXX
+#ifdef _USE_EXHW_W25QXX
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+
 
 
   // @https://github.com/nimaltd/w25qxx/blob/master/w25qxx.c
@@ -59,10 +59,11 @@ extern "C" {
 
 
 
+#endif
+
 #ifdef __cplusplus
 }
 #endif
 
-#endif
 
 #endif /* SRC_COMMON_INC_MODULE_W25QXX_H_ */

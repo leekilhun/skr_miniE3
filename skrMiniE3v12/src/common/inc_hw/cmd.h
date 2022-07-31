@@ -8,13 +8,12 @@
 #ifndef SRC_COMMON_INC_HW_CMD_H_
 #define SRC_COMMON_INC_HW_CMD_H_
 
-
-
-#include "hw_def.h"
-
 #ifdef __cplusplus
  extern "C" {
 #endif
+
+#include "hw_def.h"
+
 
 #ifdef _USE_HW_CMD
 

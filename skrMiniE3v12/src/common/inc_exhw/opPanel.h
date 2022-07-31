@@ -8,14 +8,16 @@
 #ifndef SRC_COMMON_INC_MODULE_OPPANEL_H_
 #define SRC_COMMON_INC_MODULE_OPPANEL_H_
 
-#include "exhw_def.h"
-
-
-#ifdef _USE_MODULE_OPPANEL
-
 #ifdef __cplusplus
 extern "C" {
 #endif
+
+#include "exhw_def.h"
+
+
+#ifdef _USE_EXHW_OPPANEL
+
+
 
   typedef enum
   {
@@ -57,10 +59,12 @@ extern "C" {
 
   bool opPanel_GetPressed(opSwitch op_sw);
 
-#ifdef __cplusplus
-}
+
+
 #endif
 
+#ifdef __cplusplus
+}
 #endif
 
 #endif /* SRC_COMMON_INC_MODULE_OPPANEL_H_ */
