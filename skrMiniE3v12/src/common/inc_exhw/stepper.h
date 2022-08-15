@@ -23,7 +23,7 @@ typedef struct
     tim_tbl_t *p_tim_handle;
     uint32_t channel;
 
-    float acceleration;
+    uint32_t acceleration;
     volatile uint32_t minStepInterval; // max speed, smaller is faster
     void (*func_dir)(axis_dir axis, int dir);
     void (*func_step)(axis_dir axis);

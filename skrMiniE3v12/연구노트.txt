@@ -1,0 +1,38 @@
+OBJECT List 
+=================================================================
+STM32103RCT 
+
+uart 1 		- USB 		(D-		PA11, D+	PA12) 
+uart 2 		- usart1 	(TX 	PA9	, RX	PA10), DMA Receive
+uart 2 		- usart2 	(TX 	PA2	, RX	PA3), rx irq
+
+LED 1 		- D0	(PA15)
+
+5/10 usb cdc기능 (uart1) 살리기
+ - gpio  Cport 13pin  usb_conn reset  (pullup)
+ - usbInit enable 한다
+ 
+ 
+@  TCM2209
+ - U3 X Step Motor
+	EN	-	PB14
+	STP	-	PB13
+	DIR	-	PB12
+	
+ - U3 Y Step Motor
+	EN	-	PB11
+	STP	-	PB2
+	DIR	-	PB10
+
+5/22 스텝 모터
+  tim7 인터럽트를 이용하여 여러개의 모터를 가감속을 제어해 보자
+  - 두개 인터럽트가 나눠질때 미세한 딜레이 발생됨...(부드럽지 않음) 
+  - 스코프 연결해 확인하니 (PB8) 이상했다.. 
+
+
+8/8  타이머 알아보기 ( timmer prescale 619 의미 )
+  timer init시 prescale  (uint32_t)(SystemCoreClock/10000000)-1; 값은
+  (SystemCoreClock(72000000)/10000000)-1  = 6 (소숫점 무시)
+  preiod = (10000-1) 설정하면  prescale(6)이 preiod(9999) 카운트하여 interrupt발생
+  prescale(6)
+

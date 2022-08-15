@@ -12,6 +12,9 @@ static void threadLed(void const *argument);
 
 void apInit(void)
 {
+
+  usbBegin(USB_CDC_MODE);
+
   cliOpen(_DEF_UART2, 115200);
 
 
@@ -39,7 +42,7 @@ void apMain(void)
 
   stepperStart(AXIS_1);
   stepperStart(AXIS_2);
-  stepperPrepareMove(AXIS_1,   16000);
+  stepperPrepareMove(AXIS_1,   26000);
   stepperPrepareMove(AXIS_2,  -32000);
   stepperRunAndWait();
 

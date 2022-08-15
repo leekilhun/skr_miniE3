@@ -53,6 +53,5 @@ bool hwInit(void)
   //ret &= spiInit();
   //ret &= i2cInit();
   //ret &= canInit();
-  usbBegin(USB_CDC_MODE);
   return ret;
 }
